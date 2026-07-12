@@ -25,6 +25,14 @@ public class ProductDetailedPage {
 	@FindBy(xpath="//span[@id='submit.add-to-cart']")
 	private WebElement addToCart;
 	
+	@FindBy(xpath="(//div[@id='corePrice_feature_div'])[1]")
+	private WebElement verifyPrice;
+	
+	@FindBy(xpath ="//div[@id='averageCustomerReviews_feature_div']")
+	private WebElement verifyReview;
+	
+	@FindBy(xpath="(//hr[@class='bucketDivider'])[1]")
+	private WebElement verifyProducDetails;
 	
 	
 	public void clickOnWishList() throws InterruptedException
@@ -46,6 +54,19 @@ public class ProductDetailedPage {
 	{
 		wait.until(ExpectedConditions.elementToBeClickable(addToCart));
 		addToCart.click();
+	}
+	public boolean isPriceDispayed()
+	{
+		return verifyPrice.isDisplayed();
+	}
+	public boolean isReviewDispayed()
+	{
+		return verifyReview.isDisplayed();
+	}
+	
+	public boolean isProductdetailedDispayed()
+	{
+		return verifyProducDetails.isDisplayed();
 	}
 	
 	public ProductDetailedPage(WebDriver driver)
