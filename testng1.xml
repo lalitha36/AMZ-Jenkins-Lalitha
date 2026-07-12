@@ -4,11 +4,16 @@
   <test thread-count="5" name="Test">
   <parameter name="Browser" value="chrome"></parameter>
     <classes>
+    <!-- 
       <class name="selenium.testng.maven.SeleniumProgransInMavenProject.TC1_LoginToAmazon"/>
       <class name="selenium.testng.maven.SeleniumProgransInMavenProject.TC2_LoginToAmazonAndLogout"/>
       <class name="selenium.testng.maven.SeleniumProgransInMavenProject.TC3_LoginSearchingClicking1st"/>
       <class name="selenium.testng.maven.SeleniumProgransInMavenProject.Tc4_LoginSearchingWishlistAddToCart"/>
+      -->
+      <class name="selenium.testng.maven.SeleniumProgransInMavenProject.TC6_LoginVerifySearchWithFilters"/>
       
+      <class name="selenium.testng.maven.SeleniumProgransInMavenProject.TC7_LiginVerifyProductPageDisplayPriceReviewDescreption"/>
+     
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
